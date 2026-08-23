@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amit Reisman — Senior Product Manager</title>
+<meta name="description" content="Amit Reisman — Senior Product Manager, B2B Fintech & Platform Products. Case studies from Finastra, Discount Bank and Teva Pharmaceutical.">
+<style>
+  :root{
+    --bg:#08070c;
+    --bg-alt:#120f1c;
+    --bg-alt2:#1c1730;
+    --card:#161221;
+    --border:#2a2438;
+    --text:#f6f4fa;
+    --text-dim:#a89fc0;
+    --yellow:#f4e04d;
+    --teal:#41e0c4;
+    --pink:#ff5f9e;
+    --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --max: 980px;
+  }
+  @media (prefers-color-scheme: light){
+    :root{
+      --bg:#fbfaf7;
+      --bg-alt:#f1eef7;
+      --bg-alt2:#eae4f7;
+      --card:#ffffff;
+      --border:#e2ddee;
+      --text:#15111f;
+      --text-dim:#5c5470;
+      --yellow:#fce23a;
+      --teal:#0d9488;
+      --pink:#e0397a;
+    }
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:var(--sans);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 24px; position:relative;}
+  .mark{
+    background:var(--yellow);
+    color:#15111f;
+    padding:0 .18em;
+    font-weight:800;
+    box-decoration-break:clone;
+    -webkit-box-decoration-break:clone;
+  }
+  .mark.teal{background:var(--teal);}
+  .mark.pink{background:var(--pink); color:#15111f;}
+  .glow{color:var(--pink);}
+  .glow.t{color:var(--teal);}
+
+  /* Status bar */
+  .statusbar{
+    background:linear-gradient(90deg, var(--pink), var(--yellow));
+    color:#15111f;
+    text-align:center;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:.02em;
+    padding:9px 12px;
+  }
+
+  /* Nav */
+  nav{
+    position:sticky; top:0; z-index:20;
+    background:color-mix(in srgb, var(--bg) 82%, transparent);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--border);
+  }
+  nav .wrap{
+    display:flex; gap:28px; align-items:center;
+    padding:16px 24px; max-width:var(--max);
+  }
+  nav a{ color:var(--text-dim); text-decoration:none; font-size:14px; font-weight:600; }
+  nav a:hover{color:var(--text);}
+  nav .brand{color:var(--text); font-weight:900; margin-right:auto; letter-spacing:-.02em; font-size:16px;}
+  .navcta{
+    background:var(--text);
+    color:var(--bg) !important;
+    padding:9px 18px;
+    border-radius:999px;
+  }
+
+  /* Hero */
+  header{ position:relative; padding:110px 0 90px; overflow:hidden; }
+  .blob{
+    position:absolute; z-index:0; filter:blur(60px); opacity:.55;
+    width:640px; height:640px; right:-220px; top:-160px;
+    background:
+      radial-gradient(circle at 30% 30%, var(--pink), transparent 60%),
+      radial-gradient(circle at 70% 60%, var(--teal), transparent 60%),
+      radial-gradient(circle at 50% 90%, var(--yellow), transparent 55%);
+    border-radius:42% 58% 65% 35% / 45% 45% 55% 55%;
+    pointer-events:none;
+  }
+  header .wrap{z-index:1;}
+  .badge-pill{
+    display:inline-flex; align-items:center; gap:8px;
+    border:1px solid var(--border);
+    background:var(--card);
+    padding:8px 16px;
+    border-radius:999px;
+    font-size:13px;
+    font-weight:600;
+    color:var(--text-dim);
+    margin-bottom:28px;
+  }
+  .dot{width:8px; height:8px; border-radius:50%; background:var(--teal); box-shadow:0 0 0 0 rgba(65,224,196,.6); animation:pulse 2s infinite;}
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 color-mix(in srgb, var(--teal) 55%, transparent);}
+    70%{box-shadow:0 0 0 9px transparent;}
+    100%{box-shadow:0 0 0 0 transparent;}
+  }
+  h1{
+    font-size:clamp(38px, 6.4vw, 74px);
+    font-weight:900;
+    line-height:1.05;
+    letter-spacing:-0.03em;
+    margin-bottom:26px;
+  }
+  .role-line{
+    font-size:19px; font-weight:600;
+    color:var(--text-dim);
+    margin-bottom:24px;
+  }
+  .intro{ font-size:17px; color:var(--text-dim); max-width:600px; margin-bottom:34px; }
+  .meta-row{ display:flex; flex-wrap:wrap; gap:10px; }
+  .pill{
+    font-size:13px; padding:7px 14px;
+    border:1px solid var(--border); border-radius:999px;
+    color:var(--text-dim); background:var(--card);
+  }
+
+  /* Manifesto */
+  .manifesto{
+    background:linear-gradient(180deg, var(--bg-alt), var(--bg-alt2));
+    padding:100px 0;
+    text-align:center;
+  }
+  .manifesto .wrap{max-width:800px;}
+  .manifesto p{
+    font-size:clamp(24px, 4vw, 38px);
+    font-weight:800;
+    line-height:1.3;
+    letter-spacing:-0.01em;
+  }
+  .manifesto small{
+    display:block;
+    margin-top:28px;
+    font-size:15px;
+    font-weight:500;
+    color:var(--text-dim);
+  }
+
+  /* Sections */
+  section.block{padding:88px 0;}
+  .section-label{
+    display:inline-block;
+    font-size:13px;
+    letter-spacing:.02em;
+    text-transform:uppercase;
+    font-weight:800;
+    color:var(--bg);
+    background:var(--yellow);
+    padding:5px 12px;
+    border-radius:6px;
+    margin-bottom:40px;
+  }
+
+  /* Case studies */
+  .case{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:40px;
+    margin-bottom:24px;
+    position:relative;
+  }
+  .case.featured{ border:2px solid var(--teal); }
+  .badge{
+    display:inline-block;
+    font-size:11px; font-weight:800; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--bg); background:var(--teal);
+    padding:5px 12px; border-radius:999px; margin-bottom:16px;
+  }
+  .case-head{ display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:8px; margin-bottom:6px; }
+  .case h3{ font-size:26px; font-weight:800; letter-spacing:-0.01em; }
+  .case .org{ font-size:13px; color:var(--text-dim); font-weight:600; white-space:nowrap; }
+  .case .tagline{ color:var(--text-dim); font-size:15.5px; font-weight:500; margin-bottom:24px; }
+  .case-grid{ display:grid; grid-template-columns:repeat(3, 1fr); gap:26px; }
+  @media (max-width:680px){ .case-grid{grid-template-columns:1fr;} }
+  .case-grid h4{ font-size:11.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--pink); font-weight:800; margin-bottom:8px; }
+  .case-grid p{ font-size:15px; color:var(--text); }
+  .case-tags{ display:flex; flex-wrap:wrap; gap:8px; margin-top:26px; padding-top:22px; border-top:1px solid var(--border); }
+  .tag{ font-size:12px; font-weight:700; padding:5px 11px; border-radius:6px; background:color-mix(in srgb, var(--yellow) 22%, transparent); color:var(--text); }
+
+  /* Skills */
+  .skills-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:28px; }
+  .skill-group h4{ font-size:13px; letter-spacing:.04em; text-transform:uppercase; font-weight:800; color:var(--teal); margin-bottom:12px; }
+  .skill-group p{ color:var(--text-dim); font-size:14.5px; }
+
+  /* Contact */
+  footer{
+    background:linear-gradient(135deg, var(--bg-alt2), var(--bg));
+    padding:100px 0 90px;
+  }
+  footer h2{ font-size:clamp(30px, 5vw, 46px); font-weight:900; letter-spacing:-0.02em; margin-bottom:16px; }
+  footer p{ color:var(--text-dim); margin-bottom:32px; max-width:520px; font-size:17px; }
+  .contact-links{ display:flex; flex-wrap:wrap; gap:14px; }
+  .contact-links a{
+    display:inline-flex; align-items:center;
+    padding:14px 24px;
+    border-radius:999px;
+    color:var(--bg);
+    text-decoration:none;
+    font-size:14.5px;
+    font-weight:800;
+    background:var(--yellow);
+    transition:transform .15s ease;
+  }
+  .contact-links a:nth-child(2){background:var(--teal);}
+  .contact-links a:nth-child(3){background:var(--pink);}
+  .contact-links a:hover{transform:translateY(-2px);}
+  .fine{ margin-top:52px; font-size:13px; color:var(--text-dim); }
+</style>
+</head>
+<body>
+
+<div class="statusbar">OPEN TO NEW OPPORTUNITIES · SENIOR PRODUCT MANAGER · B2B SAAS · FINTECH · PLATFORM</div>
+
+<nav>
+  <div class="wrap">
+    <span class="brand">AMIT REISMAN</span>
+    <a href="#work">Case Studies</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact" class="navcta">Get in touch</a>
+  </div>
+</nav>
+
+<header>
+  <div class="blob"></div>
+  <div class="wrap">
+    <span class="badge-pill"><span class="dot"></span> Open to new opportunities</span>
+    <h1>I build the parts of a financial product people <span class="mark">trust without thinking about it.</span></h1>
+    <div class="role-line">Senior Product Manager · B2B SaaS · Fintech &amp; Payments · Platform &amp; Infrastructure</div>
+    <p class="intro">
+      7+ years owning complex, regulated products end-to-end — from a 0-to-1 payment
+      platform launch to the core infrastructure global financial institutions rely on.
+      I like problems where getting it wrong has real consequences.
+    </p>
+    <div class="meta-row">
+      <span class="pill">Kfar Hess, Israel</span>
+      <span class="pill">Hebrew (Native) · English (Fluent)</span>
+      <span class="pill">Most recently @ Finastra</span>
+    </div>
+  </div>
+</header>
+
+<div class="manifesto">
+  <div class="wrap">
+    <p>I don't chase features. I chase the <span class="mark teal">one workflow</span>
+    that's quietly costing everyone time or trust — then I make it
+    <span class="mark pink">disappear into something reliable.</span></p>
+    <small>That's true whether it's $100M in purchasing decisions or a wire transfer.</small>
+  </div>
+</div>
+
+<section id="work" class="block wrap">
+  <span class="section-label">Case Studies</span>
+
+  <div class="case featured">
+    <span class="badge">Most Recent Role</span>
+    <div class="case-head">
+      <h3>Owning the platform the product runs on</h3>
+      <span class="org">Finastra · Senior Product Owner, Infrastructure &amp; Core Platform · Feb 2025–Jun 2026</span>
+    </div>
+    <div class="tagline">Product manager for the infrastructure team behind every Finastra financial product</div>
+    <div class="case-grid">
+      <div>
+        <h4>Challenge</h4>
+        <p>Global financial institutions needed the platform underneath their products
+        to keep pace with new capability — without ever trading away reliability
+        or scale to get there.</p>
+      </div>
+      <div>
+        <h4>Approach</h4>
+        <p>Own the roadmap for core platform capabilities, running discovery with
+        customer-facing teams and partnering closely with Engineering, Risk,
+        Compliance, Operations, and Business Development to translate operational
+        friction into prioritized, data-informed platform work.</p>
+      </div>
+      <div>
+        <h4>Outcome</h4>
+        <p>Architecture decisions stay grounded in real customer workflows, not
+        just feature requests — with clear KPIs tracking whether each
+        improvement actually moves the numbers that matter.</p>
+      </div>
+    </div>
+    <div class="case-tags">
+      <span class="tag">Platform Strategy</span>
+      <span class="tag">Cross-Functional Leadership</span>
+      <span class="tag">KPI Design</span>
+    </div>
+  </div>
+
+  <div class="case">
+    <div class="case-head">
+      <h3>Building trust into money movement</h3>
+      <span class="org">Finastra · 2022–2025</span>
+    </div>
+    <div class="tagline">0-to-1 launch of a B2B payment initiation platform</div>
+    <div class="case-grid">
+      <div>
+        <h4>Challenge</h4>
+        <p>SMB customers needed a way to move money that was fast, but couldn't compromise
+        on control — every transfer needed to be verifiable and hard to get wrong,
+        by design, not by policy.</p>
+      </div>
+      <div>
+        <h4>Approach</h4>
+        <p>Led discovery and owned the product end-to-end: designed a secure domestic
+        wire transfer flow with maker-checker approval built into the core workflow,
+        then extended it with an FX transfer flow across the UX and API layers.
+        Ran the joint initiative with Visa on Banking-as-a-Service capabilities,
+        aligning partner, compliance, and technical stakeholders across geographies.</p>
+      </div>
+      <div>
+        <h4>Outcome</h4>
+        <p>A regulated, trust-sensitive product shipped from scratch — built and
+        validated together with Engineering, Design, Sales, Customer Success,
+        Legal, and Compliance.</p>
+      </div>
+    </div>
+    <div class="case-tags">
+      <span class="tag">0-to-1</span>
+      <span class="tag">Payments</span>
+      <span class="tag">Regulated Product</span>
+      <span class="tag">Partner Integration</span>
+    </div>
+  </div>
+
+  <div class="case">
+    <div class="case-head">
+      <h3>Proving product value to senior leadership</h3>
+      <span class="org">Discount Bank · 2019–2022</span>
+    </div>
+    <div class="tagline">Owning a CRM product for financial operations in a regulated bank</div>
+    <div class="case-grid">
+      <div>
+        <h4>Challenge</h4>
+        <p>Internal teams running day-to-day financial operations were losing time
+        to friction in their own tools — inside a bank, where every change to
+        a process has to hold up to Legal and Compliance scrutiny.</p>
+      </div>
+      <div>
+        <h4>Approach</h4>
+        <p>Led discovery directly with internal users, partnering with senior
+        management, Legal, and Compliance to define requirements. Used user
+        interviews, customer insights, and data analysis to identify the
+        highest-value improvements and prioritize what to build first.</p>
+      </div>
+      <div>
+        <h4>Outcome</h4>
+        <p>Reduced day-to-day friction for internal users, with impact measured
+        and communicated directly to senior leadership.</p>
+      </div>
+    </div>
+    <div class="case-tags">
+      <span class="tag">Regulated Banking</span>
+      <span class="tag">Internal Tools</span>
+      <span class="tag">Stakeholder Management</span>
+    </div>
+  </div>
+
+  <div class="case">
+    <div class="case-head">
+      <h3>Turning inventory data into $100M decisions</h3>
+      <span class="org">Teva Pharmaceutical · 2014–2018</span>
+    </div>
+    <div class="tagline">MRP planning &amp; cross-functional coordination at manufacturing scale</div>
+    <div class="case-grid">
+      <div>
+        <h4>Challenge</h4>
+        <p>Raw material planning decisions touched nearly every function in the
+        plant — and slow-moving inventory was quietly costing the business
+        money no one had fully quantified.</p>
+      </div>
+      <div>
+        <h4>Approach</h4>
+        <p>Partnered with IT to develop and optimize MRP system requirements,
+        while facilitating cross-functional coordination across QC, QA,
+        marketing, procurement, import/export, warehouse, and production —
+        using data-driven analysis to find where the plan and reality diverged.</p>
+      </div>
+      <div>
+        <h4>Outcome</h4>
+        <p>Reduced slow-moving inventory by 8%, on projects that shaped
+        $100M in annual purchasing decisions.</p>
+      </div>
+    </div>
+    <div class="case-tags">
+      <span class="tag">Supply Chain</span>
+      <span class="tag">MRP Systems</span>
+      <span class="tag">Data-Driven Ops</span>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="block wrap">
+  <span class="section-label">Skills &amp; Tools</span>
+  <div class="skills-grid">
+    <div class="skill-group">
+      <h4>Product</h4>
+      <p>Roadmap &amp; Strategy, Product Discovery, Requirements &amp; User Stories,
+      Prioritization, KPI Definition &amp; Tracking, Experimentation</p>
+    </div>
+    <div class="skill-group">
+      <h4>Domain</h4>
+      <p>B2B Financial Platforms, Payments, Cross-Border Transfers (FX),
+      Banking-as-a-Service, Regulated / Trust-Sensitive Products</p>
+    </div>
+    <div class="skill-group">
+      <h4>Cross-Functional</h4>
+      <p>Engineering, Risk &amp; Compliance, Legal, Sales, Customer Success,
+      Stakeholder Management, Agile / Scrum</p>
+    </div>
+    <div class="skill-group">
+      <h4>Tools</h4>
+      <p>Jira, Confluence, Figma, SQL, REST APIs, Postman, Azure</p>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2>Let's talk.</h2>
+    <p>Open to Senior Product Manager roles in B2B SaaS, fintech, and platform products.</p>
+    <div class="contact-links">
+      <a href="mailto:areismana@gmail.com">areismana@gmail.com</a>
+      <a href="tel:+972548882388">054-888-2388</a>
+      <a href="https://www.linkedin.com/in/amit-reisman/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+    <div class="fine">Amit Reisman · Kfar Hess, Israel</div>
+  </div>
+</footer>
+
+</body>
+</html>
