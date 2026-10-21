@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amit Reisman — Senior Product Manager</title>
-<meta name="description" content="Amit Reisman — Senior Product Manager, B2B Fintech & Platform Products. Case studies from Finastra, Discount Bank and Teva Pharmaceutical.">
+<title>Amit Reisman | Senior Product Manager</title>
+<meta name="description" content="Amit Reisman, Senior Product Manager. Payments, fintech and platform products. Experience from Finastra, Discount Bank and Teva, plus two products built with AI: a job-search agent and a budgeting app.">
 <style>
   :root{
     --bg:#08070c;
@@ -231,16 +231,60 @@
   .contact-links a:nth-child(3){background:var(--pink);}
   .contact-links a:hover{transform:translateY(-2px);}
   .fine{ margin-top:52px; font-size:13px; color:var(--text-dim); }
+
+  /* Small screens: keep the four nav items on one line */
+  section.block, footer{ scroll-margin-top:64px; }
+  @media (max-width:560px){
+    nav .wrap{ gap:12px; padding:12px 16px; }
+    nav a{ font-size:13px; }
+    nav .brand{ font-size:13px; white-space:nowrap; }
+    .navcta{ padding:7px 12px; white-space:nowrap; }
+    nav a[href="#skills"]{ display:none; }
+    .case .org{ white-space:normal; }
+    .wrap{ padding:0 16px; }
+    .case, .project{ padding:26px 22px; }
+  }
+
+  .hero-actions{ margin-bottom:22px; }
+  .contact-links a:nth-child(4){background:var(--text); color:var(--bg);}
+
+  /* Projects */
+  .section-intro{ color:var(--text-dim); font-size:16.5px; max-width:680px; margin:-12px 0 32px; }
+  .project-grid{ display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:24px; }
+  .project{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:34px;
+    display:flex; flex-direction:column;
+  }
+  .project h3{ font-size:24px; font-weight:800; letter-spacing:-0.01em; margin-bottom:6px; }
+  .project .tagline{ margin-bottom:14px; }
+  .project > p:not(.tagline){ font-size:15px; color:var(--text); }
+  .project .case-tags{ margin-top:20px; padding-top:18px; }
+  .badge.pink{ background:var(--pink); color:#15111f; }
+  .project .badge{ align-self:flex-start; }
+  .project-links{ display:flex; flex-wrap:wrap; gap:10px; margin-top:auto; padding-top:24px; }
+  .btn{
+    display:inline-flex; align-items:center;
+    padding:11px 20px; border-radius:999px;
+    font-size:14px; font-weight:800; text-decoration:none;
+    background:var(--yellow); color:#15111f;
+    transition:transform .15s ease;
+  }
+  .btn:hover{ transform:translateY(-2px); }
+  .btn.ghost{ background:transparent; color:var(--text); border:1.5px solid var(--border); }
+  .btn.ghost:hover{ border-color:var(--text-dim); }
 </style>
 </head>
 <body>
-
-<div class="statusbar">OPEN TO NEW OPPORTUNITIES · SENIOR PRODUCT MANAGER · B2B SAAS · FINTECH · PLATFORM</div>
+<div class="statusbar">OPEN TO NEW OPPORTUNITIES · SENIOR PRODUCT MANAGER · PAYMENTS · PLATFORMS · AI</div>
 
 <nav>
   <div class="wrap">
     <span class="brand">AMIT REISMAN</span>
-    <a href="#work">Case Studies</a>
+    <a href="#work">Experience</a>
+    <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
     <a href="#contact" class="navcta">Get in touch</a>
   </div>
@@ -250,13 +294,15 @@
   <div class="blob"></div>
   <div class="wrap">
     <span class="badge-pill"><span class="dot"></span> Open to new opportunities</span>
-    <h1>From a 0-to-1 payment platform to <span class="mark">the infrastructure global institutions run on.</span></h1>
-    <div class="role-line">Senior Product Manager · B2B SaaS · Fintech &amp; Payments · Platform &amp; Infrastructure</div>
+    <h1>Product manager for software that moves money, <span class="mark">from first launch to high-volume infrastructure.</span></h1>
+    <div class="role-line">Senior Product Manager · Payments &amp; Fintech · Platforms &amp; Infrastructure</div>
     <p class="intro">
-      7+ years owning complex, regulated products end-to-end — from a 0-to-1 payment
-      platform launch to the core infrastructure global financial institutions rely on.
-      I like problems where getting it wrong has real consequences.
+      Seven years in product management across banking software and payments. I took a payment
+      platform from discovery to its first paying customers, then owned product for the core platform
+      that Finastra's products run on. I like problems where getting it wrong has real consequences,
+      and on the side I build my own tools with AI.
     </p>
+    <p class="hero-actions"><a class="btn" href="Amit_Reisman_CV.pdf" download>Download my CV (PDF)</a></p>
     <div class="meta-row">
       <span class="pill">Kfar Hess, Israel</span>
       <span class="pill">Hebrew (Native) · English (Fluent)</span>
@@ -268,149 +314,183 @@
 <div class="manifesto">
   <div class="wrap">
     <p>I don't chase features. I chase the <span class="mark teal">one workflow</span>
-    that's quietly costing everyone time or trust — then I make it
-    <span class="mark pink">disappear into something reliable.</span></p>
-    <small>That's true whether it's $100M in purchasing decisions or a wire transfer.</small>
+    that's quietly costing everyone time or trust, then I make it
+    <span class="mark pink">something people can rely on.</span></p>
+    <small>From raw-material planning in a plant to a wire transfer in a bank.</small>
   </div>
 </div>
 
 <section id="work" class="block wrap">
-  <span class="section-label">Case Studies</span>
+  <span class="section-label">Experience</span>
 
   <div class="case featured">
     <span class="badge">Most Recent Role</span>
     <div class="case-head">
-      <h3>Owning the platform the product runs on</h3>
-      <span class="org">Finastra · Senior Product Owner, Infrastructure &amp; Core Platform · Feb 2025–Jun 2026</span>
+      <h3>Owning the platform the products run on</h3>
+      <span class="org">Finastra · Senior Product Owner, Infrastructure &amp; Core Platform · Feb 2025 to Jun 2026</span>
     </div>
-    <div class="tagline">Product manager for the infrastructure team behind every Finastra financial product</div>
+    <div class="tagline">Product owner for the infrastructure team behind Finastra's payment products</div>
     <div class="case-grid">
       <div>
-        <h4>Challenge</h4>
-        <p>Global financial institutions needed the platform underneath their products
-        to keep pace with new capability — without ever trading away reliability
-        or scale to get there.</p>
+        <h4>The problem</h4>
+        <p>A payment mechanism handling millions of payments needed an architecture change,
+        and a high-volume path can't be allowed to break while it evolves.</p>
       </div>
       <div>
-        <h4>Approach</h4>
-        <p>Own the roadmap for core platform capabilities, running discovery with
-        customer-facing teams and partnering closely with Engineering, Risk,
-        Compliance, Operations, and Business Development to translate operational
-        friction into prioritized, data-informed platform work.</p>
+        <h4>What I did</h4>
+        <p>Led the product side of the change, working through design trade-offs with system
+        architects and dev leads. Ran discovery with customer-facing teams to turn recurring
+        pain points into clear specifications.</p>
       </div>
       <div>
-        <h4>Outcome</h4>
-        <p>Architecture decisions stay grounded in real customer workflows, not
-        just feature requests — with clear KPIs tracking whether each
-        improvement actually moves the numbers that matter.</p>
+        <h4>What I owned</h4>
+        <p>The roadmap and priorities for core platform capabilities whose users were engineers
+        and developers, balancing stakeholder needs, business priorities and long-term scalability.</p>
       </div>
     </div>
     <div class="case-tags">
       <span class="tag">Platform Strategy</span>
-      <span class="tag">Cross-Functional Leadership</span>
-      <span class="tag">KPI Design</span>
+      <span class="tag">Architecture Trade-offs</span>
+      <span class="tag">Developer-Facing Product</span>
     </div>
   </div>
 
   <div class="case">
     <div class="case-head">
       <h3>Building trust into money movement</h3>
-      <span class="org">Finastra · 2022–2025</span>
+      <span class="org">Finastra · Product Owner, Functional &amp; Feature Teams · 2022 to 2025</span>
     </div>
-    <div class="tagline">0-to-1 launch of a B2B payment initiation platform</div>
+    <div class="tagline">A 0-to-1 web-based payment initiation platform for SMB customers</div>
     <div class="case-grid">
       <div>
-        <h4>Challenge</h4>
-        <p>SMB customers needed a way to move money that was fast, but couldn't compromise
-        on control — every transfer needed to be verifiable and hard to get wrong,
-        by design, not by policy.</p>
+        <h4>The problem</h4>
+        <p>SMB customers needed to move money quickly, but every payment still had to be
+        controlled and hard to get wrong, by design and not by policy.</p>
       </div>
       <div>
-        <h4>Approach</h4>
-        <p>Led discovery and owned the product end-to-end: designed a secure domestic
-        wire transfer flow with maker-checker approval built into the core workflow,
-        then extended it with an FX transfer flow across the UX and API layers.
-        Ran the joint initiative with Visa on Banking-as-a-Service capabilities,
-        aligning partner, compliance, and technical stakeholders across geographies.</p>
+        <h4>What I did</h4>
+        <p>Led discovery and wrote the specifications for domestic transfers and a
+        foreign-currency flow, with maker-checker approval built into the core workflow,
+        so no payment moves without a second approval. Built its APIs together with the
+        development team, from scratch, including retrieving payments pending approval
+        and rejecting a payment.</p>
       </div>
       <div>
-        <h4>Outcome</h4>
-        <p>A regulated, trust-sensitive product shipped from scratch — built and
-        validated together with Engineering, Design, Sales, Customer Success,
-        Legal, and Compliance.</p>
+        <h4>What I owned</h4>
+        <p>Three years, from discovery and specification to launch and the first two paying
+        customers, together with Engineering, Design, Sales and Customer Success.</p>
       </div>
     </div>
     <div class="case-tags">
       <span class="tag">0-to-1</span>
       <span class="tag">Payments</span>
-      <span class="tag">Regulated Product</span>
-      <span class="tag">Partner Integration</span>
+      <span class="tag">Approval Workflows</span>
+      <span class="tag">APIs</span>
     </div>
   </div>
 
   <div class="case">
     <div class="case-head">
-      <h3>Proving product value to senior leadership</h3>
-      <span class="org">Discount Bank · 2019–2022</span>
+      <h3>Designing for the people who use it every day</h3>
+      <span class="org">Discount Bank · Product Manager · 2019 to 2022</span>
     </div>
-    <div class="tagline">Owning a CRM product for financial operations in a regulated bank</div>
+    <div class="tagline">An internal CRM for relationship managers and bankers</div>
     <div class="case-grid">
       <div>
-        <h4>Challenge</h4>
-        <p>Internal teams running day-to-day financial operations were losing time
-        to friction in their own tools — inside a bank, where every change to
-        a process has to hold up to Legal and Compliance scrutiny.</p>
+        <h4>The problem</h4>
+        <p>Relationship managers and bankers were losing time to friction in the tools they
+        used every day, inside a bank where changes have to be made with care.</p>
       </div>
       <div>
-        <h4>Approach</h4>
-        <p>Led discovery directly with internal users, partnering with senior
-        management, Legal, and Compliance to define requirements. Used user
-        interviews, customer insights, and data analysis to identify the
-        highest-value improvements and prioritize what to build first.</p>
+        <h4>What I did</h4>
+        <p>Gathered requirements directly from the bankers who used the CRM, prioritized
+        what to build first, and drove rollout and adoption.</p>
       </div>
       <div>
-        <h4>Outcome</h4>
-        <p>Reduced day-to-day friction for internal users, with impact measured
-        and communicated directly to senior leadership.</p>
+        <h4>What I owned</h4>
+        <p>The internal CRM from requirements to rollout, used by relationship managers
+        and bankers.</p>
       </div>
     </div>
     <div class="case-tags">
       <span class="tag">Regulated Banking</span>
       <span class="tag">Internal Tools</span>
-      <span class="tag">Stakeholder Management</span>
+      <span class="tag">Adoption</span>
     </div>
   </div>
 
   <div class="case">
     <div class="case-head">
-      <h3>Turning inventory data into $100M decisions</h3>
-      <span class="org">Teva Pharmaceutical · 2014–2018</span>
+      <h3>Planning at manufacturing scale</h3>
+      <span class="org">Teva Pharmaceutical · Project Manager, RM Planning Engineer · 2013 to 2018</span>
     </div>
-    <div class="tagline">MRP planning &amp; cross-functional coordination at manufacturing scale</div>
+    <div class="tagline">Raw-material planning and cross-functional coordination</div>
     <div class="case-grid">
       <div>
-        <h4>Challenge</h4>
-        <p>Raw material planning decisions touched nearly every function in the
-        plant — and slow-moving inventory was quietly costing the business
-        money no one had fully quantified.</p>
+        <h4>The problem</h4>
+        <p>Raw-material planning touched nearly every function in the plant, and
+        slow-moving inventory was quietly costing the business money.</p>
       </div>
       <div>
-        <h4>Approach</h4>
-        <p>Partnered with IT to develop and optimize MRP system requirements,
-        while facilitating cross-functional coordination across QC, QA,
-        marketing, procurement, import/export, warehouse, and production —
-        using data-driven analysis to find where the plan and reality diverged.</p>
+        <h4>What I did</h4>
+        <p>Planned raw-material requirements, partnered with IT on the MRP system's
+        requirements, and coordinated daily with QC, QA, marketing, procurement,
+        import/export, warehouse and production.</p>
       </div>
       <div>
-        <h4>Outcome</h4>
-        <p>Reduced slow-moving inventory by 8%, on projects that shaped
-        $100M in annual purchasing decisions.</p>
+        <h4>The result</h4>
+        <p>Slow-moving inventory down 8%, on work that supported $100M of purchasing
+        decisions.</p>
       </div>
     </div>
     <div class="case-tags">
       <span class="tag">Supply Chain</span>
       <span class="tag">MRP Systems</span>
-      <span class="tag">Data-Driven Ops</span>
+      <span class="tag">Cross-Functional Coordination</span>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="block wrap">
+  <span class="section-label">Projects</span>
+  <p class="section-intro">Two products I built on my own with an AI coding agent. In both, the real design
+  question was where the software should act on its own and where a person has to stay in control.</p>
+
+  <div class="project-grid">
+    <div class="project">
+      <span class="badge pink">Agent</span>
+      <h3>Job Search Agent</h3>
+      <p class="tagline">An agent that runs my job search, with me approving every step.</p>
+      <p>It scans company job boards, scores fit with an LLM against weighted criteria, and drafts
+      a tailored CV and cover letter. The model writes only from a fixed facts file, so it can't
+      invent experience, and nothing is sent anywhere without my approval.</p>
+      <div class="case-tags">
+        <span class="tag">LLM scoring</span>
+        <span class="tag">Human in the loop</span>
+        <span class="tag">Guardrails</span>
+      </div>
+      <div class="project-links">
+        <a class="btn" href="https://amitreisman.github.io/job-search-agent/">See how it works</a>
+        <a class="btn ghost" href="https://github.com/amitreisman/job-search-agent" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <span class="badge">Prototype</span>
+      <h3>ReisWise</h3>
+      <p class="tagline">A mobile-first budgeting app, in Hebrew.</p>
+      <p>It imports bank and card exports, classifies transactions with rules plus my own
+      corrections, and reconciles card statements against account debits to the cent. Anything
+      the rules don't recognize waits for review instead of being guessed. The demo runs on
+      synthetic data, and works best on a phone.</p>
+      <div class="case-tags">
+        <span class="tag">Reconciliation</span>
+        <span class="tag">Data quality checks</span>
+        <span class="tag">RTL / Hebrew</span>
+      </div>
+      <div class="project-links">
+        <a class="btn" href="reiswise/">Open the live demo</a>
+      </div>
     </div>
   </div>
 </section>
@@ -420,22 +500,22 @@
   <div class="skills-grid">
     <div class="skill-group">
       <h4>Product</h4>
-      <p>Roadmap &amp; Strategy, Product Discovery, Requirements &amp; User Stories,
-      Prioritization, KPI Definition &amp; Tracking, Experimentation</p>
+      <p>Roadmap and prioritization, product discovery, requirements and specifications with
+      edge cases, user stories, agile delivery</p>
     </div>
     <div class="skill-group">
       <h4>Domain</h4>
-      <p>B2B Financial Platforms, Payments, Cross-Border Transfers (FX),
-      Banking-as-a-Service, Regulated / Trust-Sensitive Products</p>
+      <p>Payments, banking software, core platforms, regulated products, approval workflows
+      (maker-checker), foreign-currency payment flows</p>
     </div>
     <div class="skill-group">
       <h4>Cross-Functional</h4>
-      <p>Engineering, Risk &amp; Compliance, Legal, Sales, Customer Success,
-      Stakeholder Management, Agile / Scrum</p>
+      <p>Engineering, Design, Sales, Customer Success, system architects, stakeholder management</p>
     </div>
     <div class="skill-group">
-      <h4>Tools</h4>
-      <p>Jira, Confluence, Figma, SQL, REST APIs, Postman, Azure</p>
+      <h4>AI &amp; Tools</h4>
+      <p>Claude, ChatGPT, AI coding agents (Claude Code), LLM-based workflow automation,
+      REST APIs, Figma (basic), Looker (basic), Microsoft Dynamics 365</p>
     </div>
   </div>
 </section>
@@ -443,11 +523,12 @@
 <footer id="contact">
   <div class="wrap">
     <h2>Let's talk.</h2>
-    <p>Open to Senior Product Manager roles in B2B SaaS, fintech, and platform products.</p>
+    <p>Open to Senior Product Manager roles in payments, fintech and platform products.</p>
     <div class="contact-links">
       <a href="mailto:areismana@gmail.com">areismana@gmail.com</a>
       <a href="https://wa.me/972548882388" target="_blank" rel="noopener">WhatsApp</a>
       <a href="https://www.linkedin.com/in/amit-reisman/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="Amit_Reisman_CV.pdf" download>Download CV</a>
     </div>
     <div class="fine">Amit Reisman · Kfar Hess, Israel</div>
   </div>
