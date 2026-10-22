@@ -276,21 +276,22 @@
   .hero-photo{
     position:absolute; z-index:0; margin:0;
     right:0; top:50%; transform:translateY(-50%);
-    width:min(540px, 46vw); pointer-events:none;
+    width:min(470px, 42vw); pointer-events:none;
   }
   .hero-photo img{
     width:100%; height:auto; display:block; border-radius:0;
     /* full strength on the face, only the edges melt into the page */
     /* eased (smoothstep-like) fades, so there is no visible start or end line */
     --fade-x: linear-gradient(to right,
-      rgba(0,0,0,0) 0%, rgba(0,0,0,.01) 6%, rgba(0,0,0,.04) 12%, rgba(0,0,0,.1) 18%,
-      rgba(0,0,0,.2) 25%, rgba(0,0,0,.36) 32%, rgba(0,0,0,.55) 40%, rgba(0,0,0,.74) 48%,
-      rgba(0,0,0,.9) 56%, rgba(0,0,0,.97) 64%, #000 72%);
+      rgba(0,0,0,0) 0%, rgba(0,0,0,0) 8%, rgba(0,0,0,.03) 14%, rgba(0,0,0,.12) 20%,
+      rgba(0,0,0,.3) 26%, rgba(0,0,0,.52) 32%, rgba(0,0,0,.72) 38%, rgba(0,0,0,.88) 44%,
+      rgba(0,0,0,.96) 50%, #000 58%);
     --fade-y: linear-gradient(to bottom,
-      rgba(0,0,0,0) 0%, rgba(0,0,0,.05) 4%, rgba(0,0,0,.2) 9%, rgba(0,0,0,.5) 14%,
-      rgba(0,0,0,.82) 19%, #000 26%, #000 40%, rgba(0,0,0,.93) 48%, rgba(0,0,0,.76) 56%,
-      rgba(0,0,0,.52) 64%, rgba(0,0,0,.3) 72%, rgba(0,0,0,.14) 80%, rgba(0,0,0,.05) 88%,
-      rgba(0,0,0,.01) 95%, rgba(0,0,0,0) 100%);
+      rgba(0,0,0,0) 0%, rgba(0,0,0,.04) 4%, rgba(0,0,0,.16) 8%, rgba(0,0,0,.42) 12%,
+      rgba(0,0,0,.72) 16%, rgba(0,0,0,.92) 20%, #000 25%, #000 80%,
+      rgba(0,0,0,.9) 84%, rgba(0,0,0,.66) 88%, rgba(0,0,0,.38) 92%, rgba(0,0,0,.14) 96%,
+      rgba(0,0,0,0) 100%);
+    clip-path:inset(1px 1px 1px 4%);
     -webkit-mask-image:var(--fade-x), var(--fade-y);
     -webkit-mask-composite:source-in;
     mask-image:var(--fade-x), var(--fade-y);
@@ -406,7 +407,7 @@
     </div>
    </div>
    <figure class="hero-photo">
-     <img src="photo.jpg?v=5" alt="Amit Reisman" width="712" height="1067" decoding="async">
+     <img src="photo.jpg?v=6" alt="Amit Reisman" width="602" height="1067" decoding="async">
    </figure>
   </div>
 </header>
