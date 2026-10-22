@@ -279,8 +279,10 @@
   }
   .hero-photo img{
     width:100%; height:auto; display:block; border-radius:0;
-    -webkit-mask-image:radial-gradient(closest-side, #000 36%, transparent 98%);
-    mask-image:radial-gradient(closest-side, #000 36%, transparent 98%);
+    -webkit-mask-image:radial-gradient(closest-side, #000 18%, rgba(0,0,0,.72) 40%, rgba(0,0,0,.32) 66%, rgba(0,0,0,.1) 84%, transparent 98%);
+    mask-image:radial-gradient(closest-side, #000 18%, rgba(0,0,0,.72) 40%, rgba(0,0,0,.32) 66%, rgba(0,0,0,.1) 84%, transparent 98%);
+    filter:saturate(.9);
+    opacity:.94;
   }
   @media (max-width:1080px){
     .hero-photo{ width:380px; right:-70px; }
