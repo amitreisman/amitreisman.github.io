@@ -319,6 +319,10 @@
   .case.collapsible > :not(summary){ margin-left:40px; margin-right:40px; }
   .case.collapsible > .case-tags{ margin-bottom:34px; }
   .case.collapsible > .tagline{ margin-top:2px; }
+
+  .project-card > .project-desc{ font-size:15px; color:var(--text); margin-top:0; margin-bottom:4px; }
+  .project-card > .case-tags{ margin-bottom:0; }
+  .project-card > .project-links{ margin-top:20px; margin-bottom:34px; padding-top:0; }
   @media (max-width:560px){
     .case.collapsible > summary{ padding:20px 22px; }
     .case.collapsible > :not(summary){ margin-left:22px; margin-right:22px; }
@@ -540,47 +544,54 @@
 </section>
 
 <section id="projects" class="block wrap">
-  <span class="section-label">Projects</span>
-  <p class="section-intro">Two products I built on my own with an AI coding agent. In both, the real design
-  question was where the software should act on its own and where a person has to stay in control.</p>
+  <span class="section-label">Personal Projects</span>
+  <p class="section-intro">Two products I built on my own, outside of work, with an AI coding agent. In both, the real
+  design question was where the software should act on its own and where a person has to stay in control.</p>
 
-  <div class="project-grid">
-    <div class="project">
-      <span class="badge pink">Agent</span>
-      <h3>Job Search Agent</h3>
-      <p class="tagline">An agent that runs my job search, with me approving every step.</p>
-      <p>It scans company job boards, scores fit with an LLM against weighted criteria, and drafts
-      a tailored CV and cover letter. The model writes only from a fixed facts file, so it can't
-      invent experience, and nothing is sent anywhere without my approval.</p>
-      <div class="case-tags">
-        <span class="tag">LLM scoring</span>
-        <span class="tag">Human in the loop</span>
-        <span class="tag">Guardrails</span>
+  <details class="case collapsible project-card">
+    <summary class="case-head">
+      <div class="summary-text">
+        <h3>An agent that runs my job search</h3>
+        <span class="org">Job Search Agent · Personal project · 2026</span>
       </div>
-      <div class="project-links">
-        <a class="btn" href="https://amitreisman.github.io/job-search-agent/">See how it works</a>
-        <a class="btn ghost" href="https://github.com/amitreisman/job-search-agent" target="_blank" rel="noopener">GitHub</a>
-      </div>
+      <span class="chev" aria-hidden="true"></span>
+    </summary>
+    <div class="tagline">An agent that runs my job search, with me approving every step.</div>
+    <p class="project-desc">It scans company job boards, scores fit with an LLM against weighted criteria, and drafts
+    a tailored CV and cover letter. The model writes only from a fixed facts file, so it can't invent experience,
+    and nothing is sent anywhere without my approval.</p>
+    <div class="case-tags">
+      <span class="tag">LLM scoring</span>
+      <span class="tag">Human in the loop</span>
+      <span class="tag">Guardrails</span>
     </div>
+    <div class="project-links">
+      <a class="btn" href="https://amitreisman.github.io/job-search-agent/">See how it works</a>
+      <a class="btn ghost" href="https://github.com/amitreisman/job-search-agent" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </details>
 
-    <div class="project">
-      <span class="badge">Prototype</span>
-      <h3>ReisWise</h3>
-      <p class="tagline">A mobile-first budgeting app, in Hebrew.</p>
-      <p>It imports bank and card exports, classifies transactions with rules plus my own
-      corrections, and reconciles card statements against account debits to the cent. Anything
-      the rules don't recognize waits for review instead of being guessed. The demo runs on
-      synthetic data, and works best on a phone.</p>
-      <div class="case-tags">
-        <span class="tag">Reconciliation</span>
-        <span class="tag">Data quality checks</span>
-        <span class="tag">RTL / Hebrew</span>
+  <details class="case collapsible project-card">
+    <summary class="case-head">
+      <div class="summary-text">
+        <h3>A budgeting app that never guesses</h3>
+        <span class="org">ReisWise · Personal project · 2026</span>
       </div>
-      <div class="project-links">
-        <a class="btn" href="reiswise/">Open the live demo</a>
-      </div>
+      <span class="chev" aria-hidden="true"></span>
+    </summary>
+    <div class="tagline">A mobile-first budgeting app, in Hebrew.</div>
+    <p class="project-desc">It imports bank and card exports, classifies transactions with rules plus my own
+    corrections, and reconciles card statements against account debits to the cent. Anything the rules don't
+    recognize waits for review instead of being guessed. The demo runs on synthetic data, and works best on a phone.</p>
+    <div class="case-tags">
+      <span class="tag">Reconciliation</span>
+      <span class="tag">Data quality checks</span>
+      <span class="tag">RTL / Hebrew</span>
     </div>
-  </div>
+    <div class="project-links">
+      <a class="btn" href="reiswise/">Open the live demo</a>
+    </div>
+  </details>
 </section>
 
 <section id="skills" class="block wrap">
